@@ -35,11 +35,14 @@ nav#bottom {
     flex-flow: row wrap;
 }
 
+
+
 nav#bottom ul {
     max-width: 150px;
     flex: 1;
 }
 
+/* Basically what these lines of code do is make the bottom of the webpage set to a specific size. */
 
 /* ===============================
 	Mobile Styles up to 480 pixels
@@ -51,18 +54,24 @@ nav#bottom ul {
         background-color: rgb(51, 51, 51);
     }
 
+    /* These lines of code setup the mobile version of the webpage and what I mean by this is that it formats the webpage to fit mobile devices and also it sets the background color of the mobile version of the webpage to a dark grey.  */
+
     aside,
-    article>img,
-    #spotlight {
+    article img,
+    section#spotlight {
         display: none;
     }
+
+    /* This line of code makes it where you cant see the aside and article image in the mobile version of the website. */
 
     nav#top ul {
         display: -webkit-flex;
         display: flex;
-        -webkit-flex-wrap: row wrap;
-        flex-wrap: row wrap;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
     }
+
+    /* These line of code make it where the images are displayed into 2 columns */
 
     nav#top ul li {
         font-size: 2.2em;
@@ -71,11 +80,14 @@ nav#bottom ul {
         flex-basis: 130px;
     }
 
+    /* These lines of code make it where the text on the images are the correct size to the set images. */
+
     nav#top ul li:nth-of-type(1) {
         background: url(cw_image01.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        width: 100%;
     }
 
     nav#top ul li:nth-of-type(2) {
@@ -83,6 +95,7 @@ nav#bottom ul {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        width: 100%;
     }
 
     nav#top ul li:nth-of-type(3) {
@@ -90,6 +103,7 @@ nav#bottom ul {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        width: 100%;
     }
 
     nav#top ul li:nth-of-type(4) {
@@ -97,6 +111,7 @@ nav#bottom ul {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        width: 100%;
     }
 
     nav#top ul li:nth-of-type(5) {
@@ -104,6 +119,7 @@ nav#bottom ul {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        width: 100%;
     }
 
     nav#top ul li:nth-of-type(6) {
@@ -111,13 +127,19 @@ nav#bottom ul {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        width: 100%;
     }
+
+    /* All these lines of code just add the images to the webpage and also sets the images to the correct size and position.  */
 
     p#links {
         display: flex;
         flex-flow: wrap;
+        -webkit-justify-content: space-around;
         justify-content: space-around;
     }
+
+    /* These lines of code make the email and phone number be set in the correct position. */
 
     p#links a {
         color: white;
@@ -126,6 +148,9 @@ nav#bottom ul {
         padding: 10px;
         text-decoration: none;
     }
+
+    /* These lines of code add a border around the links also it makes the links have a reb background and white text. */
+
 }
 
 
@@ -139,37 +164,47 @@ nav#bottom ul {
     body {
         display: -webkit-flex;
         display: flex;
+        -webkit-flex-flow: row wrap;
         flex-flow: row wrap;
     }
 
-    p#links a {
+    /* These lines of code just format the website to fix on a desktop display and also a tablets. */
+
+    p#links {
         display: none;
     }
 
+    /* This line of code just gets rid of the links that are the email and phone number. */
+
     article {
-        flex-grow: 2;
-        flex-shrink: 1;
-        flex-basis: 400px;
+        -webkit-flex: 2 1 400px;
+        flex: 2 1 400px;
     }
 
     aside {
-        flex-grow: 1;
-        flex-shrink: 2;
-        flex-basis: 200px;
+        -webkit-flex: 1 2 200px;
+        flex: 1 2 200px;
     }
 
-    #top nav.horizontal ul {
+    /* These lines of code move the images to the right side of the page. */
+
+    nav#top ul {
+        display: -webkit-flex;
         display: flex;
-        height: 80px;
+        background-color: rgb(51, 51, 51);
+        height: 50px;
+        -webkit-justify-content: center;
         justify-content: center;
+        -webkit-align-items: center;
         align-items: center;
     }
 
-    #top nav ul li {
-        max-height: 80px;
-        flex-shrink: 1;
-        flex-grow: 1;
+    nav#top ul li {
+        -webkit-flex: 0 1 80px;
+        flex: 0 1 80px;
     }
+
+    /* Finally these lines of code make the links display at the top of the webpage and also pushes all of the webpage to the top so there is no empty space.  */
 
 
 
